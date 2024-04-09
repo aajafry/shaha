@@ -1,0 +1,226 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Tailwind CSS Base, Components, and Utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Root Variables */
+:root {
+  --font-base: "Cinzel Decorative", serif;
+  --font-alt: "Poppins", sans-serif;
+  --dark-text-base: #bfc8d1;
+  --dark-text-alt: #70808e;
+  --light-text-base: #309b90;
+  --light-text-alt: #000000;
+  --dark-bg-base: #17202a;
+  --dark-bg-alt: #1c2733;
+  --light-bg-base: #ffffff;
+  --light-bg-alt: #f4f4f4;
+  --dark-btn: #077068;
+  --light-btn: #309b90;
+}
+
+@layer utilities {
+  /* Global Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* scroll-behavior: smooth; */
+    /* font-display: swap; */
+    /* font-smooth: antialiased; */
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    /* overflow-x: hidden; */
+    /* user-select: none; */
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  button {
+    font-family: var(--font-base);
+  }
+
+  p,
+  span {
+    font-family: var(--font-alt);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 0.625rem;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--text-base);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--btn-base);
+  }
+}
+
+.toggleThemeBtn {
+  padding: 0px;
+  background: none;
+  box-shadow: none;
+}
+
+.screen-max-width {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1120px;
+}
+
+.parallax-donate,
+.parallaxs-ilamic-pillar,
+.parallax-newsletter {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.parallax-donate {
+  background-image: url("/assets/images/donate.png");
+}
+.parallaxs-ilamic-pillar {
+  background-image: url("/assets/images/pillar.jpg");
+}
+.parallax-newsletter {
+  background-image: url("/assets/images/newsletter.jpg");
+}
+
+/* before:absolute before:content-none before:bottom-0 before:left-0 before:bg-gradient-to-t before:from-white before:z-10 before:h-52 before:w-full */
+
+.parallax-before::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, #17202a, transparent);
+  opacity: 100%;
+}
+footer h2,
+.logo h2 {
+  color: #309b90 !important;
+}
+
+.prayersSubHeading {
+  color: #828282 !important;
+}
+
+.newsletter-wrapper h2,
+.donate-wrapper h2,
+.PillarsOfIslam-header-wrapper h2 {
+  color: #f4f4f4 !important;
+}
+
+.donate-wrapper p {
+  color: #bfc8d1 !important;
+}
+
+#about-image {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+#about-image::before {
+  position: absolute;
+  content: "";
+  background-color: #077068;
+  width: 60%;
+  height: 170%;
+  z-index: -10;
+  transform: rotate(45deg);
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+  /* Spacing and Layout */
+  .section-margin {
+    @apply mt-20;
+  }
+
+  .section-padding {
+    @apply py-20 px-5 sm:py-32 sm:px-10;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  /* Text Styles */
+  .heading {
+    @apply text-xl;
+  }
+
+  .sub-heading {
+    @apply text-4xl;
+  }
+
+  .common-pera {
+    @apply text-sm;
+  }
+
+  /* Button Styles */
+  .common-btn {
+    @apply font-semibold py-2 px-4 w-fit rounded shadow;
+  }
+
+  .dark-btn {
+    @apply bg-[#f4f4f4];
+  }
+
+  .light-btn {
+    @apply bg-[#309b90];
+  }
+
+  /* Background and Text Colors */
+  .dark-bg-main {
+    @apply bg-[#17202a];
+  }
+
+  .dark-bg-alt {
+    @apply bg-[#1c2733];
+  }
+
+  .light-bg-main {
+    @apply bg-[#ffffff];
+  }
+
+  .light-bg-alt {
+    @apply bg-[#f4f4f4];
+  }
+
+  .dark-text-main {
+    @apply text-[#bfc8d1];
+  }
+
+  .dark-text-alt {
+    @apply text-[#70808e];
+  }
+}

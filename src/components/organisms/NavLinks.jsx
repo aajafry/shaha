@@ -6,7 +6,7 @@ import Link from "../atom/Link";
 
 export default function NavLinks({ classes }) {
   return (
-    <ul className={`flex ${classes}`}>
+    <ul className={`flex navLinks ${classes}`}>
       {navLists.map((item) => (
         <li key={item.id}>
           <Link

@@ -9,25 +9,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function HeroBanner() {
   useGSAP(() => {
-    gsap.from("#text", {
-      yPercent: 100,
-      // scale: 0.8,
+    gsap.to("#text", {
+      yPercent: -50,
+      scale: 1.2,
       ease: "power2.inOut",
       scrollTrigger: {
         scrub: 5.5,
-        trigger: "#text",
+        trigger: "#hero-banner",
       },
     });
     gsap.fromTo(
       "#bg1",
-      { y: 0 },
+      { y: 50 },
       {
-        y: 50,
+        y: 150,
         duration: 0.7,
         ease: "power2.inOut",
         scrollTrigger: {
           scrub: 1.5,
-          trigger: "#text",
+          trigger: "#hero-banner",
         },
       }
     );
@@ -35,12 +35,12 @@ export default function HeroBanner() {
       "#bg2",
       { y: 0 },
       {
-        y: 50,
+        y: 100,
         duration: 0.9,
         ease: "power2.inOut",
         scrollTrigger: {
           scrub: 1.5,
-          trigger: "#text",
+          trigger: "#hero-banner",
         },
       }
     );
@@ -53,7 +53,7 @@ export default function HeroBanner() {
         ease: "power2.inOut",
         scrollTrigger: {
           scrub: 1.5,
-          trigger: "#text",
+          trigger: "#hero-banner",
         },
       }
     );
@@ -62,12 +62,12 @@ export default function HeroBanner() {
   return (
     <section
       id="hero-banner"
-      className="relative  h-[100dvh] w-full flex-center text-center overflow-hidden parallax-before"
+      className="relative h-[100dvh] w-full flex-center text-center overflow-hidden parallax-before"
     >
       <Heading
         heading="assalamu alaikum"
         animationId="text"
-        classes="absolute capitalize text-[6dvw] text-[#309b90] tracking-wider -translate-y-full text-nowrap"
+        classes="hero-text absolute capitalize text-[6dvw] tracking-wider -translate-y-full text-nowrap"
       />
       <BannerImages />
     </section>

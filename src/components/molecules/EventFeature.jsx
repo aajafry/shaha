@@ -29,7 +29,7 @@ export default function EventFeature({
           classes="text-2xl text-neutral-800"
         />
 
-        <div className="text-sm text-neutral-500 dark-text-alt text-nowrap flex gap-2">
+        <div className="text-sm text-neutral-500 dark-text-alt flex-wrap flex gap-2">
           <span id={animationId}>{location}</span>
           <span id={animationId}> {time}</span>
         </div>

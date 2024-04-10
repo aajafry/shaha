@@ -87,6 +87,14 @@
   position: relative;
   max-width: 1120px;
 }
+.hero-text {
+  color: #309b90 !important;
+}
+
+.navLinks a {
+  font-family: var(--font-base);
+  font-weight: 600;
+}
 
 .parallax-donate,
 .parallaxs-ilamic-pillar,

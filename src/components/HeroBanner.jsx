@@ -1,63 +1,31 @@
 /* eslint-disable no-unused-vars */
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import { useEffect } from "react";
 import Heading from "./atom/Heading";
 import BannerImages from "./organisms/BannerImages";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function HeroBanner() {
-  useGSAP(() => {
-    gsap.to("#text", {
-      yPercent: -50,
-      scale: 1.2,
-      ease: "power2.inOut",
-      scrollTrigger: {
-        scrub: 5.5,
-        trigger: "#hero-banner",
-      },
-    });
-    gsap.fromTo(
-      "#bg1",
-      { y: 50 },
-      {
-        y: 150,
-        duration: 0.7,
-        ease: "power2.inOut",
-        scrollTrigger: {
-          scrub: 1.5,
-          trigger: "#hero-banner",
-        },
-      }
-    );
-    gsap.fromTo(
-      "#bg2",
-      { y: 0 },
-      {
-        y: 100,
-        duration: 0.9,
-        ease: "power2.inOut",
-        scrollTrigger: {
-          scrub: 1.5,
-          trigger: "#hero-banner",
-        },
-      }
-    );
-    gsap.fromTo(
-      "#bg3",
-      { y: 0 },
-      {
-        y: 50,
-        duration: 1.1,
-        ease: "power2.inOut",
-        scrollTrigger: {
-          scrub: 1.5,
-          trigger: "#hero-banner",
-        },
-      }
-    );
-  });
+  useEffect(() => {
+    const [text, bg1, bg2, bg3] = [
+      document.querySelector("#text"),
+      document.querySelector("#bg1"),
+      document.querySelector("#bg2"),
+      document.querySelector("#bg3"),
+    ];
+
+    const scrollAnim = () => {
+      let scrollValue = window.scrollY;
+      text.style.marginTop = scrollValue * -1.5 + "px";
+      bg1.style.top = scrollValue * 0.75 + "px";
+      bg2.style.top = scrollValue * 0.5 + "px";
+      bg3.style.top = scrollValue * 0.25 + "px";
+    };
+
+    window.addEventListener("scroll", scrollAnim);
+
+    return () => {
+      window.removeEventListener("scroll", scrollAnim);
+    };
+  }, []);
 
   return (
     <section
@@ -67,7 +35,7 @@ export default function HeroBanner() {
       <Heading
         heading="assalamu alaikum"
         animationId="text"
-        classes="hero-text absolute capitalize text-[6dvw] tracking-wider -translate-y-full text-nowrap"
+        classes="hero-text absolute capitalize text-[7dvw] translate-y-full tracking-wider text-nowrap transition-all ease-linear duration-700"
       />
       <BannerImages />
     </section>

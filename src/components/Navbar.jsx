@@ -18,7 +18,7 @@ export default function Navbar() {
       {
         yPercent: 0,
         opacity: 1,
-        zIndex: 50,
+        zIndex: 40,
         display: "flex",
         ease: "power2.inOut",
         position: "fixed",
@@ -39,7 +39,7 @@ export default function Navbar() {
 
   useEffect(() => {
     let onResize = () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 900) {
         setMenu(false);
       } else {
         setMenu(true);
@@ -49,7 +49,7 @@ export default function Navbar() {
     onResize();
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 900) {
         setMenu(false);
       } else {
         setMenu(true);
@@ -57,7 +57,7 @@ export default function Navbar() {
     });
 
     return window.removeEventListener("resize", () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth > 900) {
         setMenu(false);
       } else {
         setMenu(true);
@@ -72,7 +72,10 @@ export default function Navbar() {
         className="w-full bg-transparent shadow backdrop-blur flex items-center px-10 sm:px-12 py-8 sm:py-10 opacity-0"
       >
         <div className="logo">
-          <Heading heading="SHAHA" classes="text-4xl text-[#309b90]" />
+          <Heading
+            heading="SHAHA"
+            classes="text-4xl text-[#309b90] cursor-pointer"
+          />
         </div>
         <div className="flex-1 flex justify-center">
           {menu ? (

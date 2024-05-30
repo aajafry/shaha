@@ -43,7 +43,7 @@ export default function IslamicPillars() {
   });
   return (
     <section className="w-full overflow-hidden relative parallaxs-ilamic-pillar">
-      <div className="absolute inset-0  bg-[#17202a]/70"></div>
+      <div className="absolute inset-0 bg-[#17202a]/70"></div>
       <div className="section-padding">
         <div className="screen-max-width">
           <div className="PillarsOfIslam-wrapper">

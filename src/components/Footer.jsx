@@ -31,7 +31,7 @@ export default function Footer() {
   });
 
   return (
-    <footer className="w-full overflow-hidden section-padding  light-bg-main dark:dark-bg-main">
+    <footer className="w-full overflow-hidden section-padding light-bg-main dark:dark-bg-main">
       <div className="screen-max-width">
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-baseline gap-8">
@@ -65,12 +65,12 @@ export default function Footer() {
                 <Link
                   href="tel:+18881234567"
                   text="1 888 123 4567"
-                  classes="footer-g-grow hover:text-[#309b90] transition duration-300 ease-in-out"
+                  classes="footer-g-grow hover:text-[#309b90]"
                 />
                 <Link
                   href="mailto:info@yousite.com"
                   text="info@yousite.com"
-                  classes="footer-g-grow hover:text-[#309b90] transition duration-300 ease-in-out"
+                  classes="footer-g-grow hover:text-[#309b90]"
                 />
                 <Peragraph
                   classes="footer-g-grow"
@@ -91,28 +91,28 @@ export default function Footer() {
                   <Link
                     href="#"
                     text="Facebook"
-                    classes="footer-g-grow hover:text-[#309b90] transition duration-300 ease-in-out"
+                    classes="footer-g-grow hover:text-[#309b90]"
                   />
                 </li>
                 <li>
                   <Link
                     href="#"
                     text="Instagram"
-                    classes="footer-g-grow hover:text-[#309b90] transition duration-300 ease-in-out"
+                    classes="footer-g-grow hover:text-[#309b90]"
                   />
                 </li>
                 <li>
                   <Link
                     href="#"
                     text="Pinterest"
-                    classes="footer-g-grow hover:text-[#309b90] transition duration-300 ease-in-out"
+                    classes="footer-g-grow hover:text-[#309b90]"
                   />
                 </li>
                 <li>
                   <Link
                     href="#"
                     text="X"
-                    classes="footer-g-grow hover:text-[#309b90] transition duration-300 ease-in-out"
+                    classes="footer-g-grow hover:text-[#309b90]"
                   />
                 </li>
               </ul>

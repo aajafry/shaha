@@ -8,26 +8,30 @@ import IslamicPillars from "./components/IslamicPillars";
 import News from "./components/News";
 import Newsletter from "./components/Newsletter";
 import Philosophy from "./components/Philosophy";
-import Services from "./components/Services";
 import Prayers from "./components/Prayers";
+import Services from "./components/Services";
+import CustomCursor from "./components/atom/CustomCursor";
+import Preloader from "./components/atom/Preloader";
+
 export default function App() {
   return (
-    <main>
-      <Header />
-      <Prayers />
-      <About />
-      <Philosophy />
-      {/* parallax */}
-      <Donate />
-      <Services />
-      <ImageGallery />
-      {/* parallax */}
-      <IslamicPillars />
-      <Events />
-      <News />
-      {/* parallax */}
-      <Newsletter />
-      <Footer />
-    </main>
+    <>
+      <Preloader />
+      <main>
+        <CustomCursor />
+        <Header />
+        <Prayers />
+        <About />
+        <Philosophy />
+        <Donate />
+        <Services />
+        <ImageGallery />
+        <IslamicPillars />
+        <Events />
+        <News />
+        <Newsletter />
+        <Footer />
+      </main>
+    </>
   );
-} 
+}

@@ -181,6 +181,12 @@ footer h2,
   transform: rotate(45deg);
 }
 
+@media (max-width: 768px) {
+  .customSursor {
+    display: none;
+  }
+}
+
 /* Custom Utility Classes */
 @layer utilities {
   /* Spacing and Layout */
